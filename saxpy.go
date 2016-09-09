@@ -1,7 +1,7 @@
 package main
 
 //go:generate nvcc saxpy.cu --ptx
-//go:generate nvcc saxpy.cu
+//go:generate nvcc -c saxpy.cu
 //go:generate ar rvs saxpy.a saxpy.o
 
 //#cgo LDFLAGS: -L/opt/cuda/lib64 -lcuda -lcudart saxpy.a
